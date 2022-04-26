@@ -1,3 +1,56 @@
-body {
-  background: orange;
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+fieldset {
+  display: grid;
+  gap: 3px;
+  width: 75vw;
+  border-style: none;
+  box-shadow: -4px 4px 14px 0px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 600px) {
+  fieldset {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  input,
+  select,
+  textarea {
+    justify-self: center;
+  }
+}
+
+input,
+select {
+  max-width: 300px;
+  height: 1.8rem;
+  width: 300px;
+}
+textarea {
+  max-width: 300px;
+  height: 3.6rem;
+  resize: none;
+  width: 300px;
+}
+
+form {
+  display: grid;
+  gap: 6px;
+  justify-content: center;
+  position: relative;
+  top: 130px;
+}
+
+label.required::after {
+  content: ' *';
+  color: #e32;
 }
