@@ -21,6 +21,14 @@ form {
   background-color: white;
 }
 
+.grid-card:hover {
+  box-shadow: -4px 4px 14px 0px rgba(0, 0, 0, 0.3);
+}
+
+.grid-card:focus-within {
+  box-shadow: -4px 4px 14px 0px rgba(0, 0, 0, 0.3);
+}
+
 @media all and (min-width: 950px) {
   .grid-card {
     grid-template-columns: 1fr 1fr;
@@ -72,8 +80,4 @@ input[type='submit'] {
 
 input[type='submit']:focus {
   background-color: rgb(170, 105, 105, 1);
-}
-
-.fields::focus-within {
-  font-weight: bold;
 }
